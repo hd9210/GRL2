@@ -1,0 +1,117 @@
+/* Admin Dashboard Page - Styled like Homepage */
+.admin-dashboard {
+  position: relative;
+  width: 100vw;
+  top: -80px;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #e46c88, #986cca, #6874c2, #5e8bc5);
+  background-size: 300% 300%;
+  animation: gradientAnimation 15s infinite;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  justify-items: center;
+}
+
+.file-upload-box {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  margin: 1rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.file-upload-box h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+input[type="file"] {
+  width: 90%;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  padding: 0.75rem;
+}
+
+input[type="file"]:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.admin-button{
+  margin-top: 1rem;
+  width: 60%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  background: rgb(16, 125, 193);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .file-upload-box {
+    padding: 1rem;
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .file-upload-box {
+    padding: 0.75rem;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
